@@ -1,0 +1,27 @@
+PODS:
+  - AMap3DMap (4.5.0):
+    - AMapFoundation (~> 1.3)
+  - AMapFoundation (1.3.2)
+  - AMapLocation (2.2.0):
+    - AMapFoundation (~> 1.3)
+  - AMapSearch (4.4.1):
+    - AMapFoundation (~> 1.2)
+  - Masonry (1.0.2)
+
+DEPENDENCIES:
+  - AMap3DMap
+  - AMapFoundation
+  - AMapLocation
+  - AMapSearch
+  - Masonry (~> 1.0.2)
+
+SPEC CHECKSUMS:
+  AMap3DMap: ac2a5aa9c1d689ad67a07f5925e2bbeadaff3c37
+  AMapFoundation: 843dc27b2c02bc0bc2ef3346bb3dd0456cf64dbb
+  AMapLocation: 3f2005c6dec6a7a1107258d0cde43b9d7399d217
+  AMapSearch: 16a50b493ad419e8b6b81bafdeca7570db52f28e
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+
+PODFILE CHECKSUM: 164fb54f06173e38ed2775e4dcdd24095ac6eade
+
+COCOAPODS: 1.1.1
