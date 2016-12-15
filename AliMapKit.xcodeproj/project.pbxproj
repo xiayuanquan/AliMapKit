@@ -68,6 +68,12 @@
 		E46A4A3B1DFEDA710099E425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46A4A391DFEDA710099E425 /* LaunchScreen.storyboard */; };
 		E46A4A461DFEDA710099E425 /* AliMapKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E46A4A451DFEDA710099E425 /* AliMapKitTests.m */; };
 		E46A4A511DFEDA710099E425 /* AliMapKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E46A4A501DFEDA710099E425 /* AliMapKitUITests.m */; };
+		E483B3D01E0220B50039F1B6 /* map1.png in Resources */ = {isa = PBXBuildFile; fileRef = E483B3CA1E0220B50039F1B6 /* map1.png */; };
+		E483B3D11E0220B50039F1B6 /* map2.png in Resources */ = {isa = PBXBuildFile; fileRef = E483B3CB1E0220B50039F1B6 /* map2.png */; };
+		E483B3D21E0220B50039F1B6 /* map3.png in Resources */ = {isa = PBXBuildFile; fileRef = E483B3CC1E0220B50039F1B6 /* map3.png */; };
+		E483B3D31E0220B50039F1B6 /* map4.png in Resources */ = {isa = PBXBuildFile; fileRef = E483B3CD1E0220B50039F1B6 /* map4.png */; };
+		E483B3D41E0220B50039F1B6 /* map5.png in Resources */ = {isa = PBXBuildFile; fileRef = E483B3CE1E0220B50039F1B6 /* map5.png */; };
+		E483B3D51E0220B50039F1B6 /* map6.png in Resources */ = {isa = PBXBuildFile; fileRef = E483B3CF1E0220B50039F1B6 /* map6.png */; };
 		E4E4E2601E0131F600D73011 /* AliMapViewMonitoringRegionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4E25F1E0131F600D73011 /* AliMapViewMonitoringRegionController.m */; };
 		E4E4E2631E013DF500D73011 /* AliMapViewLocationDataAvailableController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4E2621E013DF500D73011 /* AliMapViewLocationDataAvailableController.m */; };
 		E4E4E2671E013FFE00D73011 /* AliMapViewSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4E2661E013FFE00D73011 /* AliMapViewSearchController.m */; };
@@ -207,6 +213,12 @@
 		E46A4A4C1DFEDA710099E425 /* AliMapKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliMapKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46A4A501DFEDA710099E425 /* AliMapKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliMapKitUITests.m; sourceTree = "<group>"; };
 		E46A4A521DFEDA710099E425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E483B3CA1E0220B50039F1B6 /* map1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map1.png; sourceTree = "<group>"; };
+		E483B3CB1E0220B50039F1B6 /* map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map2.png; sourceTree = "<group>"; };
+		E483B3CC1E0220B50039F1B6 /* map3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map3.png; sourceTree = "<group>"; };
+		E483B3CD1E0220B50039F1B6 /* map4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map4.png; sourceTree = "<group>"; };
+		E483B3CE1E0220B50039F1B6 /* map5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map5.png; sourceTree = "<group>"; };
+		E483B3CF1E0220B50039F1B6 /* map6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map6.png; sourceTree = "<group>"; };
 		E4E4E25E1E0131F600D73011 /* AliMapViewMonitoringRegionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewMonitoringRegionController.h; sourceTree = "<group>"; };
 		E4E4E25F1E0131F600D73011 /* AliMapViewMonitoringRegionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewMonitoringRegionController.m; sourceTree = "<group>"; };
 		E4E4E2611E013DF500D73011 /* AliMapViewLocationDataAvailableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewLocationDataAvailableController.h; sourceTree = "<group>"; };
@@ -499,6 +511,7 @@
 		E46A4A5E1DFEDAA30099E425 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E483B3C91E0220B50039F1B6 /* screenshots */,
 				E4EECCA31E004BE700E6460E /* framework */,
 				E40E6C581DFFC44400B1312B /* source */,
 				E40E6C461DFFBF1200B1312B /* other */,
@@ -508,6 +521,19 @@
 				E4E4E2641E013F8E00D73011 /* search */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		E483B3C91E0220B50039F1B6 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				E483B3CA1E0220B50039F1B6 /* map1.png */,
+				E483B3CB1E0220B50039F1B6 /* map2.png */,
+				E483B3CC1E0220B50039F1B6 /* map3.png */,
+				E483B3CD1E0220B50039F1B6 /* map4.png */,
+				E483B3CE1E0220B50039F1B6 /* map5.png */,
+				E483B3CF1E0220B50039F1B6 /* map6.png */,
+			);
+			path = screenshots;
 			sourceTree = "<group>";
 		};
 		E4E4E2641E013F8E00D73011 /* search */ = {
@@ -708,6 +734,8 @@
 			files = (
 				E46A4A3B1DFEDA710099E425 /* LaunchScreen.storyboard in Resources */,
 				E40E6C9D1E001C3B00B1312B /* bus@2x.png in Resources */,
+				E483B3D11E0220B50039F1B6 /* map2.png in Resources */,
+				E483B3D01E0220B50039F1B6 /* map1.png in Resources */,
 				E40E6C851E001C0B00B1312B /* icon-72@2x.png in Resources */,
 				E40E6C9B1E001C3B00B1312B /* arrow_right.png in Resources */,
 				E40E6CB71E001C6F00B1312B /* animatedCar_2.png in Resources */,
@@ -715,7 +743,9 @@
 				E40E6C9F1E001C3B00B1312B /* endPoint.png in Resources */,
 				E40E6CA41E001C3B00B1312B /* man@2x.png in Resources */,
 				E40E6CBB1E001C6F00B1312B /* animatedTrain_2.png in Resources */,
+				E483B3D31E0220B50039F1B6 /* map4.png in Resources */,
 				E40E6CBA1E001C6F00B1312B /* animatedTrain_1.png in Resources */,
+				E483B3D21E0220B50039F1B6 /* map3.png in Resources */,
 				E40E6C871E001C0B00B1312B /* icon@2x.png in Resources */,
 				E40E6C7D1DFFF69500B1312B /* Location.plist in Resources */,
 				E40E6C9C1E001C3B00B1312B /* arrow_right@2x.png in Resources */,
@@ -731,6 +761,7 @@
 				E40E6C661DFFCF2600B1312B /* tiananmen@2x.png in Resources */,
 				E40E6CA61E001C3B00B1312B /* naviBackgroundHighlighted.png in Resources */,
 				E40E6CA81E001C3B00B1312B /* railway_station@2x.png in Resources */,
+				E483B3D51E0220B50039F1B6 /* map6.png in Resources */,
 				E40E6C721DFFE12F00B1312B /* custom@2x.png in Resources */,
 				E40E6CAB1E001C3B00B1312B /* startPoint@2x.png in Resources */,
 				E40E6CBD1E001C6F00B1312B /* animatedTrain_4.png in Resources */,
@@ -746,6 +777,7 @@
 				E40E6CA91E001C3B00B1312B /* search@2x.png in Resources */,
 				E40E6CA11E001C3B00B1312B /* GWF.png in Resources */,
 				E40E6CA51E001C3B00B1312B /* navi@2x.png in Resources */,
+				E483B3D41E0220B50039F1B6 /* map5.png in Resources */,
 				E40E6C7F1E001BDF00B1312B /* heatMapData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
