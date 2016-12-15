@@ -65,6 +65,9 @@
 		E41DB10F1E0244AA006318D2 /* AliMapViewAddressSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB10E1E0244AA006318D2 /* AliMapViewAddressSearchController.m */; };
 		E41DB1121E0245E9006318D2 /* AliMapViewGeocodeSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB1111E0245E9006318D2 /* AliMapViewGeocodeSearchController.m */; };
 		E41DB1151E0246D0006318D2 /* AliMapViewReGeocodeSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB1141E0246D0006318D2 /* AliMapViewReGeocodeSearchController.m */; };
+		E41DB1181E0267B6006318D2 /* AliMapViewBusSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB1171E0267B6006318D2 /* AliMapViewBusSearchController.m */; };
+		E41DB11B1E02687D006318D2 /* AliMapViewBusStopSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB11A1E02687D006318D2 /* AliMapViewBusStopSearchController.m */; };
+		E41DB11E1E026891006318D2 /* AliMapViewBusRouteSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB11D1E026891006318D2 /* AliMapViewBusRouteSearchController.m */; };
 		E4320C961E02422300E72BE3 /* AliMapViewPOISearchByAroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4320C881E02422300E72BE3 /* AliMapViewPOISearchByAroundController.m */; };
 		E4320C971E02422300E72BE3 /* AliMapViewPOISearchByIDController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4320C8A1E02422300E72BE3 /* AliMapViewPOISearchByIDController.m */; };
 		E4320C981E02422300E72BE3 /* AliMapViewPOISearchByKeywordController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4320C8C1E02422300E72BE3 /* AliMapViewPOISearchByKeywordController.m */; };
@@ -213,6 +216,12 @@
 		E41DB1111E0245E9006318D2 /* AliMapViewGeocodeSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewGeocodeSearchController.m; sourceTree = "<group>"; };
 		E41DB1131E0246D0006318D2 /* AliMapViewReGeocodeSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewReGeocodeSearchController.h; sourceTree = "<group>"; };
 		E41DB1141E0246D0006318D2 /* AliMapViewReGeocodeSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewReGeocodeSearchController.m; sourceTree = "<group>"; };
+		E41DB1161E0267B6006318D2 /* AliMapViewBusSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewBusSearchController.h; sourceTree = "<group>"; };
+		E41DB1171E0267B6006318D2 /* AliMapViewBusSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewBusSearchController.m; sourceTree = "<group>"; };
+		E41DB1191E02687D006318D2 /* AliMapViewBusStopSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewBusStopSearchController.h; sourceTree = "<group>"; };
+		E41DB11A1E02687D006318D2 /* AliMapViewBusStopSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewBusStopSearchController.m; sourceTree = "<group>"; };
+		E41DB11C1E026891006318D2 /* AliMapViewBusRouteSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewBusRouteSearchController.h; sourceTree = "<group>"; };
+		E41DB11D1E026891006318D2 /* AliMapViewBusRouteSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewBusRouteSearchController.m; sourceTree = "<group>"; };
 		E4320C871E02422300E72BE3 /* AliMapViewPOISearchByAroundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewPOISearchByAroundController.h; sourceTree = "<group>"; };
 		E4320C881E02422300E72BE3 /* AliMapViewPOISearchByAroundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewPOISearchByAroundController.m; sourceTree = "<group>"; };
 		E4320C891E02422300E72BE3 /* AliMapViewPOISearchByIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewPOISearchByIDController.h; sourceTree = "<group>"; };
@@ -481,6 +490,12 @@
 		E4320C821E02422300E72BE3 /* Bus */ = {
 			isa = PBXGroup;
 			children = (
+				E41DB1161E0267B6006318D2 /* AliMapViewBusSearchController.h */,
+				E41DB1171E0267B6006318D2 /* AliMapViewBusSearchController.m */,
+				E41DB1191E02687D006318D2 /* AliMapViewBusStopSearchController.h */,
+				E41DB11A1E02687D006318D2 /* AliMapViewBusStopSearchController.m */,
+				E41DB11C1E026891006318D2 /* AliMapViewBusRouteSearchController.h */,
+				E41DB11D1E026891006318D2 /* AliMapViewBusRouteSearchController.m */,
 			);
 			path = Bus;
 			sourceTree = "<group>";
@@ -930,6 +945,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E4E2701E015F3700D73011 /* AliMapViewShopModel.m in Sources */,
+				E41DB11B1E02687D006318D2 /* AliMapViewBusStopSearchController.m in Sources */,
 				E40E6C541DFFBF1200B1312B /* AliMapViewDrawPinDefalutPointController.m in Sources */,
 				E4EE46A61E0185230018111D /* UIView+WebCacheOperation.m in Sources */,
 				E40E6C511DFFBF1200B1312B /* AliMapViewDrawPinController.m in Sources */,
@@ -942,6 +958,7 @@
 				E4EE46A11E0185230018111D /* UIButton+WebCache.m in Sources */,
 				E4320C961E02422300E72BE3 /* AliMapViewPOISearchByAroundController.m in Sources */,
 				E4E4E2601E0131F600D73011 /* AliMapViewMonitoringRegionController.m in Sources */,
+				E41DB1181E0267B6006318D2 /* AliMapViewBusSearchController.m in Sources */,
 				E4E4E2761E015F7D00D73011 /* AliMapViewShopCellFrame.m in Sources */,
 				E4EE46A21E0185230018111D /* UIImage+GIF.m in Sources */,
 				E4EE46A01E0185230018111D /* SDWebImagePrefetcher.m in Sources */,
@@ -974,6 +991,7 @@
 				E4EE46991E0185230018111D /* NSData+ImageContentType.m in Sources */,
 				E4320C9B1E02422300E72BE3 /* AliMapViewPOISearchController.m in Sources */,
 				E41DB10F1E0244AA006318D2 /* AliMapViewAddressSearchController.m in Sources */,
+				E41DB11E1E026891006318D2 /* AliMapViewBusRouteSearchController.m in Sources */,
 				E40E6C781DFFE3AD00B1312B /* AliMapViewDrawSurfaceCircleController.m in Sources */,
 				E4EECCAC1E004BE700E6460E /* XYQProgressHUD.m in Sources */,
 				E4EECCAA1E004BE700E6460E /* XYQProgressHUD+XYQ.m in Sources */,
