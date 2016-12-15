@@ -10,6 +10,8 @@
 #import "AliMapViewPOISearchController.h"
 #import "AliMapViewAddressSearchController.h"
 #import "AliMapViewBusSearchController.h"
+#import "AliMapViewDistrictSearchController.h"
+#import "AliMapViewWeatherSearchController.h"
 
 @interface AliMapViewSearchController ()
 @property (strong,nonatomic)NSMutableArray *allSearchs;
@@ -21,7 +23,7 @@
     if (!_allSearchs) {
         _allSearchs = [NSMutableArray arrayWithObjects:
                        @"获取POI数据",@"获取地址描述数据",@"获取公交数据",
-                       @"获取行政区划分数据",@"获取天气数据",@"获取自有数据",nil];
+                       @"获取行政区划分数据",@"获取天气数据",nil];
     }
     return _allSearchs;
 }
@@ -74,6 +76,20 @@
         AliMapViewBusSearchController *busSearchVC = [[AliMapViewBusSearchController alloc] init];
         busSearchVC.title = self.allSearchs[indexPath.row];
         [self.navigationController pushViewController:busSearchVC animated:YES];
+    }
+    
+    //获取行政区划分数据
+    if (indexPath.row==3) {
+        AliMapViewDistrictSearchController *districtSearchVC = [[AliMapViewDistrictSearchController alloc] init];
+        districtSearchVC.title = self.allSearchs[indexPath.row];
+        [self.navigationController pushViewController:districtSearchVC animated:YES];
+    }
+    
+    //获取天气数据
+    if (indexPath.row==4) {
+        AliMapViewWeatherSearchController *weatherSearchVC = [[AliMapViewWeatherSearchController alloc] init];
+        weatherSearchVC.title = self.allSearchs[indexPath.row];
+        [self.navigationController pushViewController:weatherSearchVC animated:YES];
     }
 }
 

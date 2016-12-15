@@ -40,8 +40,9 @@
     BOOL flag= AMapLocationDataAvailableForCoordinate(touch.coordinate);
     if (flag) {
         NSLog(@"大陆地区");
+        [XYQProgressHUD showSuccess:@"大陆地区"];
     }else{
-        NSLog(@"非大陆地区");
+        [XYQProgressHUD showError:@"非大陆地区"];
     }
 }
 

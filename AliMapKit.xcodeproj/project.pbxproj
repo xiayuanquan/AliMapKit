@@ -68,6 +68,8 @@
 		E41DB1181E0267B6006318D2 /* AliMapViewBusSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB1171E0267B6006318D2 /* AliMapViewBusSearchController.m */; };
 		E41DB11B1E02687D006318D2 /* AliMapViewBusStopSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB11A1E02687D006318D2 /* AliMapViewBusStopSearchController.m */; };
 		E41DB11E1E026891006318D2 /* AliMapViewBusRouteSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB11D1E026891006318D2 /* AliMapViewBusRouteSearchController.m */; };
+		E41DB1211E0288D4006318D2 /* AliMapViewDistrictSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB1201E0288D4006318D2 /* AliMapViewDistrictSearchController.m */; };
+		E41DB1241E029F3D006318D2 /* AliMapViewWeatherSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DB1231E029F3D006318D2 /* AliMapViewWeatherSearchController.m */; };
 		E4320C961E02422300E72BE3 /* AliMapViewPOISearchByAroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4320C881E02422300E72BE3 /* AliMapViewPOISearchByAroundController.m */; };
 		E4320C971E02422300E72BE3 /* AliMapViewPOISearchByIDController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4320C8A1E02422300E72BE3 /* AliMapViewPOISearchByIDController.m */; };
 		E4320C981E02422300E72BE3 /* AliMapViewPOISearchByKeywordController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4320C8C1E02422300E72BE3 /* AliMapViewPOISearchByKeywordController.m */; };
@@ -222,6 +224,10 @@
 		E41DB11A1E02687D006318D2 /* AliMapViewBusStopSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewBusStopSearchController.m; sourceTree = "<group>"; };
 		E41DB11C1E026891006318D2 /* AliMapViewBusRouteSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewBusRouteSearchController.h; sourceTree = "<group>"; };
 		E41DB11D1E026891006318D2 /* AliMapViewBusRouteSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewBusRouteSearchController.m; sourceTree = "<group>"; };
+		E41DB11F1E0288D4006318D2 /* AliMapViewDistrictSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewDistrictSearchController.h; sourceTree = "<group>"; };
+		E41DB1201E0288D4006318D2 /* AliMapViewDistrictSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewDistrictSearchController.m; sourceTree = "<group>"; };
+		E41DB1221E029F3D006318D2 /* AliMapViewWeatherSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewWeatherSearchController.h; sourceTree = "<group>"; };
+		E41DB1231E029F3D006318D2 /* AliMapViewWeatherSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewWeatherSearchController.m; sourceTree = "<group>"; };
 		E4320C871E02422300E72BE3 /* AliMapViewPOISearchByAroundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewPOISearchByAroundController.h; sourceTree = "<group>"; };
 		E4320C881E02422300E72BE3 /* AliMapViewPOISearchByAroundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewPOISearchByAroundController.m; sourceTree = "<group>"; };
 		E4320C891E02422300E72BE3 /* AliMapViewPOISearchByIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewPOISearchByIDController.h; sourceTree = "<group>"; };
@@ -510,6 +516,8 @@
 		E4320C841E02422300E72BE3 /* District */ = {
 			isa = PBXGroup;
 			children = (
+				E41DB11F1E0288D4006318D2 /* AliMapViewDistrictSearchController.h */,
+				E41DB1201E0288D4006318D2 /* AliMapViewDistrictSearchController.m */,
 			);
 			path = District;
 			sourceTree = "<group>";
@@ -538,6 +546,8 @@
 		E4320C951E02422300E72BE3 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				E41DB1221E029F3D006318D2 /* AliMapViewWeatherSearchController.h */,
+				E41DB1231E029F3D006318D2 /* AliMapViewWeatherSearchController.m */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -947,6 +957,7 @@
 				E4E4E2701E015F3700D73011 /* AliMapViewShopModel.m in Sources */,
 				E41DB11B1E02687D006318D2 /* AliMapViewBusStopSearchController.m in Sources */,
 				E40E6C541DFFBF1200B1312B /* AliMapViewDrawPinDefalutPointController.m in Sources */,
+				E41DB1241E029F3D006318D2 /* AliMapViewWeatherSearchController.m in Sources */,
 				E4EE46A61E0185230018111D /* UIView+WebCacheOperation.m in Sources */,
 				E40E6C511DFFBF1200B1312B /* AliMapViewDrawPinController.m in Sources */,
 				E4320C981E02422300E72BE3 /* AliMapViewPOISearchByKeywordController.m in Sources */,
@@ -981,6 +992,7 @@
 				E4320C991E02422300E72BE3 /* AliMapViewPOISearchByPolygonController.m in Sources */,
 				E4E4E2631E013DF500D73011 /* AliMapViewLocationDataAvailableController.m in Sources */,
 				E40E6C561DFFBF1200B1312B /* AliMapRootViewController.m in Sources */,
+				E41DB1211E0288D4006318D2 /* AliMapViewDistrictSearchController.m in Sources */,
 				E40E6C701DFFDDC600B1312B /* AliMapViewDrawPolylineController.m in Sources */,
 				E46A4A2D1DFEDA710099E425 /* main.m in Sources */,
 				E40E6C7B1DFFF55800B1312B /* AliMapViewDrawSurfaceHeatController.m in Sources */,

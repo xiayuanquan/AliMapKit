@@ -38,7 +38,7 @@
     _mapView.logoCenter = CGPointMake(55, SCREEN_HEGHT-30);//调整地图logol位置
     [_mapView setZoomLevel:17.5 animated:YES];//设置缩放级别
     
-    ///把地图添加至view
+    //把地图添加至view
     [self.view addSubview:_mapView];
     
     //3秒后截图

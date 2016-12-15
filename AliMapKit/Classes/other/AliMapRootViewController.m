@@ -21,7 +21,7 @@
 
 -(NSMutableArray *)allFunctions{
     if (!_allFunctions) {
-        _allFunctions = [NSMutableArray arrayWithObjects:@"地图显示",@"地图绘制",@"地图定位",@"数据检索",@"汽车导航",@"路线规划", nil];
+        _allFunctions = [NSMutableArray arrayWithObjects:@"地图显示",@"地图绘制",@"地图定位",@"数据检索",@"路线规划",@"汽车导航", nil];
     }
     return _allFunctions;
 }

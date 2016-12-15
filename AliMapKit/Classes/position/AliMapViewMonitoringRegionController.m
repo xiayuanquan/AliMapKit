@@ -128,15 +128,19 @@
     BOOL isOrNotInnerForCirRegion200 = [_cirRegion200 containsCoordinate:touch.coordinate];
     BOOL isOrNotInnerForCirRegion300 = [_cirRegion300 containsCoordinate:touch.coordinate];
     
+    
+    NSString *message = nil;
     if (isOrNotInnerForCirRegion200) {
-        NSLog(@"进入cirRegion200-----进入cirRegion300的围栏了");
+        message = @"进入红圈和绿圈";
     }
     else if (!isOrNotInnerForCirRegion200 && isOrNotInnerForCirRegion300){
-        NSLog(@"走出cirRegion200-----进入cirRegion300的围栏了");
+        message = @"走出红圈,进入绿圈";
     }
     else if (!isOrNotInnerForCirRegion200 && !isOrNotInnerForCirRegion300){
-        NSLog(@"走出cirRegion200-----走出cirRegion300的围栏了");
+        message = @"走出红圈和绿圈";
     }
+    [XYQProgressHUD showMessage:message];
+    [XYQProgressHUD performSelector:@selector(hideHUD) withObject:nil afterDelay:1.0];
 }
 
 @end
