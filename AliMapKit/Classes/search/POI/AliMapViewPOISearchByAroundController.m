@@ -1,17 +1,17 @@
 //
-//  AliMapViewPOIPoSearchBylygonController.m
+//  AliMapViewPOISearchByAroundController.m
 //  AliMapKit
 //
 //  Created by 夏远全 on 16/12/12.
 //  Copyright © 2016年 广州市东德网络科技有限公司. All rights reserved.
-//  多边形POI检索
+//  周边POI检索
 
-#import "AliMapViewPOIPoSearchByPolygonController.h"
+#import "AliMapViewPOISearchByAroundController.h"
 #import "AliMapViewShopModel.h"
 #import "AliMapViewShopCellFrame.h"
 #import "AliMapViewShopCell.h"
 
-@interface AliMapViewPOIPoSearchByPolygonController ()<AMapSearchDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface AliMapViewPOISearchByAroundController ()<AMapSearchDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)AMapSearchAPI *POISearchManager;     //POI检索引擎
 @property (nonatomic, strong)UITableView *tableView;              //表格
 @property (nonatomic, strong)NSMutableArray *shopModelCellFrames; //所有的模型
@@ -26,7 +26,7 @@
  *
  */
 
-@implementation AliMapViewPOIPoSearchByPolygonController
+@implementation AliMapViewPOISearchByAroundController
 
 //懒加载
 -(NSMutableArray *)shopModelCellFrames{
@@ -38,10 +38,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.view.backgroundColor = [UIColor colorWithRed:245/255 green:245/255 blue:245/255 alpha:1.0];
     
     //创建tableView
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:0];
-    _tableView.backgroundColor = [[UIColor alloc] initWithRed:245 green:245 blue:245 alpha:1.0];
+    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.tableFooterView = [[UIView alloc] init];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
@@ -50,20 +52,16 @@
     _POISearchManager = [[AMapSearchAPI alloc] init];
     _POISearchManager.delegate = self;
     
-    //创建POI多边检索请求
-    NSArray *points = [NSArray arrayWithObjects:
-                       [AMapGeoPoint locationWithLatitude:39.990459 longitude:116.481476],
-                       [AMapGeoPoint locationWithLatitude:39.890459 longitude:116.581476],
-                       nil];
-    AMapGeoPolygon *polygon = [AMapGeoPolygon polygonWithPoints:points];
-    AMapPOIPolygonSearchRequest *polygonRequest = [[AMapPOIPolygonSearchRequest alloc] init];
-    polygonRequest.polygon             = polygon;
-    polygonRequest.keywords            = @"Apple";
-    polygonRequest.requireExtension    = YES;
-
+    //创建POI周边检索请求
+    AMapPOIAroundSearchRequest *aroundSearchRequest = [[AMapPOIAroundSearchRequest alloc] init];
+    aroundSearchRequest.location         = [AMapGeoPoint locationWithLatitude:39.990459 longitude:116.481476];
+    aroundSearchRequest.keywords         = @"电影院";
+    aroundSearchRequest.sortrule         = 0; /* 按照距离排序. */
+    aroundSearchRequest.requireExtension = YES;
+    aroundSearchRequest.requireSubPOIs   = YES;
     
-    //发起请求,开始POI多边检索
-    [_POISearchManager AMapPOIPolygonSearch:polygonRequest];
+    //发起请求,开始POI周边检索
+    [_POISearchManager AMapPOIAroundSearch:aroundSearchRequest];
 }
 
 #pragma mark - AMapSearchDelegate

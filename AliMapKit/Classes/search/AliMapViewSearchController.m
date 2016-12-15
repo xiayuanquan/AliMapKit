@@ -8,6 +8,7 @@
 
 #import "AliMapViewSearchController.h"
 #import "AliMapViewPOISearchController.h"
+#import "AliMapViewAddressSearchController.h"
 
 @interface AliMapViewSearchController ()
 @property (strong,nonatomic)NSMutableArray *allSearchs;
@@ -53,11 +54,18 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    //获取POI数据
+    //获取POI数据  AliMapViewAddressSearchController
     if (indexPath.row==0) {
         AliMapViewPOISearchController *POISearchVC = [[AliMapViewPOISearchController alloc] init];
         POISearchVC.title = self.allSearchs[indexPath.row];
         [self.navigationController pushViewController:POISearchVC animated:YES];
+    }
+    
+    //获取POI数据
+    if (indexPath.row==1) {
+        AliMapViewAddressSearchController *AddressSearchVC = [[AliMapViewAddressSearchController alloc] init];
+        AddressSearchVC.title = self.allSearchs[indexPath.row];
+        [self.navigationController pushViewController:AddressSearchVC animated:YES];
     }
 }
 

@@ -39,10 +39,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:245/255 green:245/255 blue:245/255 alpha:1.0];
     
     //创建tableView
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:0];
-    _tableView.backgroundColor = [[UIColor alloc] initWithRed:245 green:245 blue:245 alpha:1.0];
+    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.tableFooterView = [[UIView alloc] init];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];

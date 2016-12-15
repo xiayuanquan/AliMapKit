@@ -122,6 +122,7 @@
     MATouchPoi *touch = (MATouchPoi *)[pois lastObject];
     if (!touch.name) return;//必须点击有效地区才会触发该方法
     NSLog(@"%@-----%lf----%lf",touch.name,touch.coordinate.longitude,touch.coordinate.latitude);
+    NSLog(@"%@",touch.uid);
     
     //判断是否在此区域内
     BOOL isOrNotInnerForCirRegion200 = [_cirRegion200 containsCoordinate:touch.coordinate];

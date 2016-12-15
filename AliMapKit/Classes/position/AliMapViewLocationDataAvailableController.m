@@ -35,6 +35,7 @@
     if (!touch.name) return;//必须点击有效地区才会触发该方法
     NSLog(@"%@-----%lf----%lf",touch.name,touch.coordinate.longitude,touch.coordinate.latitude);
     
+    
     //返回是否在大陆或以外地区，返回YES为大陆地区，NO为非大陆。
     BOOL flag= AMapLocationDataAvailableForCoordinate(touch.coordinate);
     if (flag) {

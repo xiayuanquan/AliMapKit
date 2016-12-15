@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AliMapViewPOIPoSearchByPolygonController : UIViewController
+@interface AliMapViewPOISearchByPolygonController : UIViewController
 
 @end

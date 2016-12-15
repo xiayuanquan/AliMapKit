@@ -9,7 +9,10 @@
 #import "AliMapViewPOISearchController.h"
 #import "AliMapViewPOISearchByKeywordController.h"
 #import "AliMapViewPOISearchByAroundController.h"
-#import "AliMapViewPOIPoSearchByPolygonController.h"
+#import "AliMapViewPOISearchByPolygonController.h"
+#import "AliMapViewPOISearchByIDController.h"
+#import "AliMapViewPOISearchByRouteController.h"
+#import "AliMapViewSearchByInputTipsController.h"
 
 @interface AliMapViewPOISearchController ()
 @property (strong,nonatomic)NSMutableArray *allPOIs;
@@ -71,9 +74,30 @@
     
     //多边形检索POI
     if (indexPath.row==2) {
-        AliMapViewPOIPoSearchByPolygonController *POIByPolygonVC = [[AliMapViewPOIPoSearchByPolygonController alloc] init];
+        AliMapViewPOISearchByPolygonController *POIByPolygonVC = [[AliMapViewPOISearchByPolygonController alloc] init];
         POIByPolygonVC.title = self.allPOIs[indexPath.row];
         [self.navigationController pushViewController:POIByPolygonVC animated:YES];
+    }
+    
+    //通过ID检索POI  AliMapViewPOISearchByRouteController
+    if (indexPath.row==3) {
+        AliMapViewPOISearchByIDController *POIByIDVC = [[AliMapViewPOISearchByIDController alloc] init];
+        POIByIDVC.title = self.allPOIs[indexPath.row];
+        [self.navigationController pushViewController:POIByIDVC animated:YES];
+    }
+    
+    //通过道路沿途检索POI #import "AliMapViewSearchByInputTipsController.h"
+    if (indexPath.row==4) {
+        AliMapViewPOISearchByRouteController *POIByRouteVC = [[AliMapViewPOISearchByRouteController alloc] init];
+        POIByRouteVC.title = self.allPOIs[indexPath.row];
+        [self.navigationController pushViewController:POIByRouteVC animated:YES];
+    }
+    
+    //给出输入提示
+    if (indexPath.row==5) {
+        AliMapViewSearchByInputTipsController *POIByInputVC = [[AliMapViewSearchByInputTipsController alloc] init];
+        POIByInputVC.title = self.allPOIs[indexPath.row];
+        [self.navigationController pushViewController:POIByInputVC animated:YES];
     }
 }
 

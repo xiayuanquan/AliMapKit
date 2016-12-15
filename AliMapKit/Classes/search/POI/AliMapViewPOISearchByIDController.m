@@ -1,17 +1,17 @@
 //
-//  AliMapViewPOISearchByAroundController.m
+//  AliMapViewPOISearchByIDController.m
 //  AliMapKit
 //
 //  Created by 夏远全 on 16/12/12.
 //  Copyright © 2016年 广州市东德网络科技有限公司. All rights reserved.
-//  周边POI检索
+//  通过ID进行POI检索
 
-#import "AliMapViewPOISearchByAroundController.h"
+#import "AliMapViewPOISearchByIDController.h"
 #import "AliMapViewShopModel.h"
 #import "AliMapViewShopCellFrame.h"
 #import "AliMapViewShopCell.h"
 
-@interface AliMapViewPOISearchByAroundController ()<AMapSearchDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface AliMapViewPOISearchByIDController ()<AMapSearchDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)AMapSearchAPI *POISearchManager;     //POI检索引擎
 @property (nonatomic, strong)UITableView *tableView;              //表格
 @property (nonatomic, strong)NSMutableArray *shopModelCellFrames; //所有的模型
@@ -26,7 +26,8 @@
  *
  */
 
-@implementation AliMapViewPOISearchByAroundController
+
+@implementation AliMapViewPOISearchByIDController
 
 //懒加载
 -(NSMutableArray *)shopModelCellFrames{
@@ -38,10 +39,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.view.backgroundColor = [UIColor colorWithRed:245/255 green:245/255 blue:245/255 alpha:1.0];
     
     //创建tableView
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:0];
-    _tableView.backgroundColor = [[UIColor alloc] initWithRed:245 green:245 blue:245 alpha:1.0];
+    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.tableFooterView = [[UIView alloc] init];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
@@ -50,23 +53,34 @@
     _POISearchManager = [[AMapSearchAPI alloc] init];
     _POISearchManager.delegate = self;
     
-    //创建POI周边检索请求
-    AMapPOIAroundSearchRequest *aroundSearchRequest = [[AMapPOIAroundSearchRequest alloc] init];
-    aroundSearchRequest.location         = [AMapGeoPoint locationWithLatitude:39.990459 longitude:116.481476];
-    aroundSearchRequest.keywords         = @"电影院";
-    aroundSearchRequest.sortrule         = 0; /* 按照距离排序. */
-    aroundSearchRequest.requireExtension = YES;
-    aroundSearchRequest.requireSubPOIs   = YES;
+    //创建ID的POI检索请求
+    AMapPOIIDSearchRequest *IdRequest = [[AMapPOIIDSearchRequest alloc] init];
+    if (_uid) {
+       
+        IdRequest.uid = _uid;
+        
+    }else{
+       IdRequest.uid  = @"B000A83BPB"; //此处的poid表示的是北京香江戴斯酒店(poid需要在MapView中点击获取,前面写的围栏监测自己可以去获取吧)
+    }
+    IdRequest.requireExtension = YES;
     
-    //发起请求,开始POI周边检索
-    [_POISearchManager AMapPOIAroundSearch:aroundSearchRequest];
+    //发起请求,开始POI的ID检索
+    [_POISearchManager AMapPOIIDSearch:IdRequest];
 }
+
+
+//接收uid
+-(void)setUid:(NSString *)uid{
+    _uid = [uid copy];
+}
+
 
 #pragma mark - AMapSearchDelegate
 //检索失败
 -(void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error{
     NSLog(@"%@",error);
 }
+
 
 //收集检索到的目标(默认每一次给出一页数据,可以自己通过上拉刷新设置page的增加)
 -(void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response{
