@@ -12,4 +12,3 @@
 
 ![image](https://github.com/xiayuanquan/AliMapKit/blob/master//AliMapKit/Classes/screenshots/map5.png)
 
-![image](https://github.com/xiayuanquan/AliMapKit/blob/master//AliMapKit/Classes/screenshots/map6.png)
