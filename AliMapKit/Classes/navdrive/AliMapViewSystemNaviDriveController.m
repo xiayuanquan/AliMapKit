@@ -1,19 +1,19 @@
 //
-//  AliMapViewNaviDriveController.m
+//  AliMapViewSystemNaviDriveController.m
 //  AliMapKit
 //
 //  Created by 夏远全 on 16/12/12.
 //  Copyright © 2016年 广州市东德网络科技有限公司. All rights reserved.
-//  导航
+//  采用系统的导航导航界面
 
-#import "AliMapViewNaviDriveController.h"
+#import "AliMapViewSystemNaviDriveController.h"
 
-@interface AliMapViewNaviDriveController ()<AMapNaviDriveViewDelegate,AMapNaviDriveManagerDelegate,AMapSearchDelegate>
-@property (strong ,nonatomic)AMapNaviDriveView *driveView;       //系统自带的导航界面
+@interface AliMapViewSystemNaviDriveController ()<AMapNaviDriveViewDelegate,AMapNaviDriveManagerDelegate>
+@property (strong ,nonatomic)AMapNaviDriveView *driveView;       //导航界面
 @property (strong ,nonatomic)AMapNaviDriveManager *driveManager; //导航管理者
 @end
 
-@implementation AliMapViewNaviDriveController
+@implementation AliMapViewSystemNaviDriveController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +24,7 @@
 - (void)initDriveView
 {
     if (!self.driveView){
-        //初始化
+        //初始化导航界面
         self.driveView = [[AMapNaviDriveView alloc] initWithFrame:CGRectMake(0,64,SCREEN_WIDTH,SCREEN_HEGHT-64)];
         self.driveView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         self.driveView.showTrafficButton = YES;
@@ -37,7 +37,7 @@
 {
     if (!self.driveManager){
         
-        //初始化
+        //初始化导航管理者
         self.driveManager = [[AMapNaviDriveManager alloc] init];
         [self.driveManager setDelegate:self];
         

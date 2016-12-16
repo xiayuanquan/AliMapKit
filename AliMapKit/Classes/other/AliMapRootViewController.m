@@ -12,7 +12,7 @@
 #import "AliMapViewPositionController.h"
 #import "AliMapViewSearchController.h"
 #import "AliMapViewRouteController.h"
-#import "AliMapViewNaviDriveController.h"
+#import "AliMapViewNavController.h"
 
 @interface AliMapRootViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong,nonatomic)NSMutableArray *allFunctions;//全部功能
@@ -96,8 +96,9 @@
         [self.navigationController pushViewController:mapViewRouteVC animated:YES];
     }
     
+    //导航
     if (indexPath.row==5) {
-        AliMapViewNaviDriveController *mapViewNavVC = [[AliMapViewNaviDriveController alloc] init];
+        AliMapViewNavController *mapViewNavVC = [[AliMapViewNavController alloc] init];
         mapViewNavVC.title = self.allFunctions[indexPath.row];
         [self.navigationController pushViewController:mapViewNavVC animated:YES];
     }

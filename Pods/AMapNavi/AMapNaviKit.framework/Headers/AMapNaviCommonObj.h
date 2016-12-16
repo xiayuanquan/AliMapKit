@@ -131,8 +131,7 @@ typedef NS_ENUM(NSInteger,AMapNaviDetectedMode)
     AMapNaviDetectedModeNone = 0,                   //!< 0 关闭所有
     AMapNaviDetectedModeCamera,                     //!< 1 仅电子眼
     AMapNaviDetectedModeSpecialRoad,                //!< 2 仅特殊道路设施
-    AMapNaviDetectedModeCameraAndSpecialRoad,       //!< 3 电子眼和特殊道路设施
-};
+updateNaviLocation};
 
 /// AMapNaviLink的道路类型
 typedef NS_ENUM(NSInteger, AMapNaviRoadClass)

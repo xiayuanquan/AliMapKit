@@ -88,7 +88,7 @@
 		E4D2B4481E03744500B53E42 /* AliMapViewWalkRouteController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B4471E03744500B53E42 /* AliMapViewWalkRouteController.m */; };
 		E4D2B44B1E03747500B53E42 /* AliMapViewBusRouteController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B44A1E03747500B53E42 /* AliMapViewBusRouteController.m */; };
 		E4D2B44E1E0374D500B53E42 /* AliMapViewBikeRouteController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B44D1E0374D500B53E42 /* AliMapViewBikeRouteController.m */; };
-		E4D2B4521E03C5FE00B53E42 /* AliMapViewNaviDriveController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B4511E03C5FE00B53E42 /* AliMapViewNaviDriveController.m */; };
+		E4D2B4521E03C5FE00B53E42 /* AliMapViewSystemNaviDriveController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B4511E03C5FE00B53E42 /* AliMapViewSystemNaviDriveController.m */; };
 		E4D2B45D1E03D38A00B53E42 /* map6.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B4531E03D38A00B53E42 /* map6.png */; };
 		E4D2B45E1E03D38A00B53E42 /* map7.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B4541E03D38A00B53E42 /* map7.png */; };
 		E4D2B45F1E03D38A00B53E42 /* map5.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B4551E03D38A00B53E42 /* map5.png */; };
@@ -99,6 +99,16 @@
 		E4D2B4641E03D38A00B53E42 /* map10.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B45A1E03D38A00B53E42 /* map10.png */; };
 		E4D2B4651E03D38A00B53E42 /* map1.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B45B1E03D38A00B53E42 /* map1.png */; };
 		E4D2B4661E03D38A00B53E42 /* map8.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B45C1E03D38A00B53E42 /* map8.png */; };
+		E4D2B46C1E03E20E00B53E42 /* AliMapViewNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B46B1E03E20E00B53E42 /* AliMapViewNavController.m */; };
+		E4D2B4721E03E67000B53E42 /* AliMapViewCustomNavDeriveController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B4711E03E67000B53E42 /* AliMapViewCustomNavDeriveController.m */; };
+		E4D2B4781E03FD2400B53E42 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B4771E03FD2400B53E42 /* UIImage+Extension.m */; };
+		E4D2B47F1E04018A00B53E42 /* custtexture_bad.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B4791E04018A00B53E42 /* custtexture_bad.png */; };
+		E4D2B4801E04018A00B53E42 /* custtexture_green.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B47A1E04018A00B53E42 /* custtexture_green.png */; };
+		E4D2B4811E04018A00B53E42 /* custtexture_no.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B47B1E04018A00B53E42 /* custtexture_no.png */; };
+		E4D2B4821E04018A00B53E42 /* custtexture_serious.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B47C1E04018A00B53E42 /* custtexture_serious.png */; };
+		E4D2B4831E04018A00B53E42 /* custtexture_slow.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B47D1E04018A00B53E42 /* custtexture_slow.png */; };
+		E4D2B4841E04018A00B53E42 /* custtexture.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B47E1E04018A00B53E42 /* custtexture.png */; };
+		E4D2B4861E04044800B53E42 /* map11.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B4851E04044800B53E42 /* map11.png */; };
 		E4E4E2601E0131F600D73011 /* AliMapViewMonitoringRegionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4E25F1E0131F600D73011 /* AliMapViewMonitoringRegionController.m */; };
 		E4E4E2631E013DF500D73011 /* AliMapViewLocationDataAvailableController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4E2621E013DF500D73011 /* AliMapViewLocationDataAvailableController.m */; };
 		E4E4E2671E013FFE00D73011 /* AliMapViewSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4E2661E013FFE00D73011 /* AliMapViewSearchController.m */; };
@@ -274,8 +284,8 @@
 		E4D2B44A1E03747500B53E42 /* AliMapViewBusRouteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewBusRouteController.m; sourceTree = "<group>"; };
 		E4D2B44C1E0374D500B53E42 /* AliMapViewBikeRouteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewBikeRouteController.h; sourceTree = "<group>"; };
 		E4D2B44D1E0374D500B53E42 /* AliMapViewBikeRouteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewBikeRouteController.m; sourceTree = "<group>"; };
-		E4D2B4501E03C5FE00B53E42 /* AliMapViewNaviDriveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewNaviDriveController.h; sourceTree = "<group>"; };
-		E4D2B4511E03C5FE00B53E42 /* AliMapViewNaviDriveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewNaviDriveController.m; sourceTree = "<group>"; };
+		E4D2B4501E03C5FE00B53E42 /* AliMapViewSystemNaviDriveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewSystemNaviDriveController.h; sourceTree = "<group>"; };
+		E4D2B4511E03C5FE00B53E42 /* AliMapViewSystemNaviDriveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewSystemNaviDriveController.m; sourceTree = "<group>"; };
 		E4D2B4531E03D38A00B53E42 /* map6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map6.png; sourceTree = "<group>"; };
 		E4D2B4541E03D38A00B53E42 /* map7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map7.png; sourceTree = "<group>"; };
 		E4D2B4551E03D38A00B53E42 /* map5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map5.png; sourceTree = "<group>"; };
@@ -286,6 +296,19 @@
 		E4D2B45A1E03D38A00B53E42 /* map10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map10.png; sourceTree = "<group>"; };
 		E4D2B45B1E03D38A00B53E42 /* map1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map1.png; sourceTree = "<group>"; };
 		E4D2B45C1E03D38A00B53E42 /* map8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map8.png; sourceTree = "<group>"; };
+		E4D2B46A1E03E20E00B53E42 /* AliMapViewNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewNavController.h; sourceTree = "<group>"; };
+		E4D2B46B1E03E20E00B53E42 /* AliMapViewNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewNavController.m; sourceTree = "<group>"; };
+		E4D2B4701E03E67000B53E42 /* AliMapViewCustomNavDeriveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewCustomNavDeriveController.h; sourceTree = "<group>"; };
+		E4D2B4711E03E67000B53E42 /* AliMapViewCustomNavDeriveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewCustomNavDeriveController.m; sourceTree = "<group>"; };
+		E4D2B4761E03FD2400B53E42 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		E4D2B4771E03FD2400B53E42 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		E4D2B4791E04018A00B53E42 /* custtexture_bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custtexture_bad.png; sourceTree = "<group>"; };
+		E4D2B47A1E04018A00B53E42 /* custtexture_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custtexture_green.png; sourceTree = "<group>"; };
+		E4D2B47B1E04018A00B53E42 /* custtexture_no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custtexture_no.png; sourceTree = "<group>"; };
+		E4D2B47C1E04018A00B53E42 /* custtexture_serious.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custtexture_serious.png; sourceTree = "<group>"; };
+		E4D2B47D1E04018A00B53E42 /* custtexture_slow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custtexture_slow.png; sourceTree = "<group>"; };
+		E4D2B47E1E04018A00B53E42 /* custtexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custtexture.png; sourceTree = "<group>"; };
+		E4D2B4851E04044800B53E42 /* map11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map11.png; sourceTree = "<group>"; };
 		E4E4E25E1E0131F600D73011 /* AliMapViewMonitoringRegionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewMonitoringRegionController.h; sourceTree = "<group>"; };
 		E4E4E25F1E0131F600D73011 /* AliMapViewMonitoringRegionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMapViewMonitoringRegionController.m; sourceTree = "<group>"; };
 		E4E4E2611E013DF500D73011 /* AliMapViewLocationDataAvailableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMapViewLocationDataAvailableController.h; sourceTree = "<group>"; };
@@ -446,6 +469,12 @@
 		E40E6C581DFFC44400B1312B /* source */ = {
 			isa = PBXGroup;
 			children = (
+				E4D2B4791E04018A00B53E42 /* custtexture_bad.png */,
+				E4D2B47A1E04018A00B53E42 /* custtexture_green.png */,
+				E4D2B47B1E04018A00B53E42 /* custtexture_no.png */,
+				E4D2B47C1E04018A00B53E42 /* custtexture_serious.png */,
+				E4D2B47D1E04018A00B53E42 /* custtexture_slow.png */,
+				E4D2B47E1E04018A00B53E42 /* custtexture.png */,
 				E40E6CAE1E001C6F00B1312B /* animatedCar_1.png */,
 				E40E6CAF1E001C6F00B1312B /* animatedCar_2.png */,
 				E40E6CB01E001C6F00B1312B /* animatedCar_3.png */,
@@ -669,6 +698,7 @@
 				E4D2B45C1E03D38A00B53E42 /* map8.png */,
 				E4D2B4591E03D38A00B53E42 /* map9.png */,
 				E4D2B45A1E03D38A00B53E42 /* map10.png */,
+				E4D2B4851E04044800B53E42 /* map11.png */,
 			);
 			path = screenshots;
 			sourceTree = "<group>";
@@ -693,8 +723,14 @@
 		E4D2B44F1E03C5E800B53E42 /* navdrive */ = {
 			isa = PBXGroup;
 			children = (
-				E4D2B4501E03C5FE00B53E42 /* AliMapViewNaviDriveController.h */,
-				E4D2B4511E03C5FE00B53E42 /* AliMapViewNaviDriveController.m */,
+				E4D2B4761E03FD2400B53E42 /* UIImage+Extension.h */,
+				E4D2B4771E03FD2400B53E42 /* UIImage+Extension.m */,
+				E4D2B46A1E03E20E00B53E42 /* AliMapViewNavController.h */,
+				E4D2B46B1E03E20E00B53E42 /* AliMapViewNavController.m */,
+				E4D2B4501E03C5FE00B53E42 /* AliMapViewSystemNaviDriveController.h */,
+				E4D2B4511E03C5FE00B53E42 /* AliMapViewSystemNaviDriveController.m */,
+				E4D2B4701E03E67000B53E42 /* AliMapViewCustomNavDeriveController.h */,
+				E4D2B4711E03E67000B53E42 /* AliMapViewCustomNavDeriveController.m */,
 			);
 			path = navdrive;
 			sourceTree = "<group>";
@@ -893,13 +929,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D2B47F1E04018A00B53E42 /* custtexture_bad.png in Resources */,
 				E46A4A3B1DFEDA710099E425 /* LaunchScreen.storyboard in Resources */,
 				E40E6C9D1E001C3B00B1312B /* bus@2x.png in Resources */,
+				E4D2B4831E04018A00B53E42 /* custtexture_slow.png in Resources */,
 				E40E6C851E001C0B00B1312B /* icon-72@2x.png in Resources */,
 				E4D2B4621E03D38A00B53E42 /* map4.png in Resources */,
 				E40E6C9B1E001C3B00B1312B /* arrow_right.png in Resources */,
 				E40E6CB71E001C6F00B1312B /* animatedCar_2.png in Resources */,
 				E4D2B4641E03D38A00B53E42 /* map10.png in Resources */,
+				E4D2B4801E04018A00B53E42 /* custtexture_green.png in Resources */,
+				E4D2B4841E04018A00B53E42 /* custtexture.png in Resources */,
 				E40E6CAD1E001C3B00B1312B /* userPosition@2x.png in Resources */,
 				E40E6C9F1E001C3B00B1312B /* endPoint.png in Resources */,
 				E40E6CA41E001C3B00B1312B /* man@2x.png in Resources */,
@@ -933,7 +973,10 @@
 				E46A4A381DFEDA710099E425 /* Assets.xcassets in Resources */,
 				E4D2B45D1E03D38A00B53E42 /* map6.png in Resources */,
 				E40E6C861E001C0B00B1312B /* icon.png in Resources */,
+				E4D2B4821E04018A00B53E42 /* custtexture_serious.png in Resources */,
 				E40E6CA01E001C3B00B1312B /* endPoint@2x.png in Resources */,
+				E4D2B4861E04044800B53E42 /* map11.png in Resources */,
+				E4D2B4811E04018A00B53E42 /* custtexture_no.png in Resources */,
 				E4D2B4611E03D38A00B53E42 /* map2.png in Resources */,
 				E40E6C5A1DFFC44D00B1312B /* hema@2x.png in Resources */,
 				E40E6CA31E001C3B00B1312B /* locate@2x.png in Resources */,
@@ -1031,6 +1074,7 @@
 				E4EE46A11E0185230018111D /* UIButton+WebCache.m in Sources */,
 				E4320C961E02422300E72BE3 /* AliMapViewPOISearchByAroundController.m in Sources */,
 				E4E4E2601E0131F600D73011 /* AliMapViewMonitoringRegionController.m in Sources */,
+				E4D2B4781E03FD2400B53E42 /* UIImage+Extension.m in Sources */,
 				E41DB1181E0267B6006318D2 /* AliMapViewBusSearchController.m in Sources */,
 				E4D2B4451E0372C300B53E42 /* AliMapViewRouteController.m in Sources */,
 				E4E4E2761E015F7D00D73011 /* AliMapViewShopCellFrame.m in Sources */,
@@ -1055,7 +1099,7 @@
 				E4EECC9F1E00422F00E6460E /* AliMapViewBackgroundPositionController.m in Sources */,
 				E4D2B44B1E03747500B53E42 /* AliMapViewBusRouteController.m in Sources */,
 				E4D2B4421E03720A00B53E42 /* AliMapViewCarRouteController.m in Sources */,
-				E4D2B4521E03C5FE00B53E42 /* AliMapViewNaviDriveController.m in Sources */,
+				E4D2B4521E03C5FE00B53E42 /* AliMapViewSystemNaviDriveController.m in Sources */,
 				E4320C991E02422300E72BE3 /* AliMapViewPOISearchByPolygonController.m in Sources */,
 				E4E4E2631E013DF500D73011 /* AliMapViewLocationDataAvailableController.m in Sources */,
 				E40E6C561DFFBF1200B1312B /* AliMapRootViewController.m in Sources */,
@@ -1076,12 +1120,14 @@
 				E4EECCAA1E004BE700E6460E /* XYQProgressHUD+XYQ.m in Sources */,
 				E4E4E2731E015F6100D73011 /* AliMapViewShopCell.m in Sources */,
 				E4EECC9C1E0041B300E6460E /* AliMapViewSinglePositionController.m in Sources */,
+				E4D2B46C1E03E20E00B53E42 /* AliMapViewNavController.m in Sources */,
 				E4D2B44E1E0374D500B53E42 /* AliMapViewBikeRouteController.m in Sources */,
 				E40E6CC31E00275A00B1312B /* AliMapViewDrawSurfaceCustomlayController.m in Sources */,
 				E40E6C571DFFBF1200B1312B /* AliMapViewShowController.m in Sources */,
 				E4EE46A51E0185230018111D /* UIImageView+WebCache.m in Sources */,
 				E4320C9C1E02422300E72BE3 /* AliMapViewSearchByInputTipsController.m in Sources */,
 				E4EE469A1E0185230018111D /* SDImageCache.m in Sources */,
+				E4D2B4721E03E67000B53E42 /* AliMapViewCustomNavDeriveController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
