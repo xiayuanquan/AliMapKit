@@ -12,3 +12,13 @@
 
 ![image](https://github.com/xiayuanquan/AliMapKit/blob/master//AliMapKit/Classes/screenshots/map5.png)
 
+![image](https://github.com/xiayuanquan/AliMapKit/blob/master//AliMapKit/Classes/screenshots/map6.png)
+
+![image](https://github.com/xiayuanquan/AliMapKit/blob/master//AliMapKit/Classes/screenshots/map7.png)
+
+![image](https://github.com/xiayuanquan/AliMapKit/blob/master//AliMapKit/Classes/screenshots/map8.png)
+
+![image](https://github.com/xiayuanquan/AliMapKit/blob/master//AliMapKit/Classes/screenshots/map9.png)
+
+![image](https://github.com/xiayuanquan/AliMapKit/blob/master//AliMapKit/Classes/screenshots/map10.png)
+
