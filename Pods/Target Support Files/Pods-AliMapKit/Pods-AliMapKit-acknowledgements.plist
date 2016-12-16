@@ -52,6 +52,17 @@
 			<key>License</key>
 			<string>Copyright</string>
 			<key>Title</key>
+			<string>AMapNavi</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright © 2014 AutoNavi. All Rights Reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
 			<string>AMapSearch</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>

@@ -23,6 +23,7 @@
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <Masonry.h>
+#import <AMapNaviKit/AMapNaviKit.h>
 
 #import "XYQProgressHUD.h"
 #import "XYQProgressHUD+XYQ.h"

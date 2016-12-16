@@ -6,5 +6,6 @@ pod 'AMapLocation'
 pod 'Masonry', '~> 1.0.2'
 pod 'AMapFoundation'
 pod 'AMapSearch'
+pod 'AMapNavi'  #导航 SDK
 
 end
