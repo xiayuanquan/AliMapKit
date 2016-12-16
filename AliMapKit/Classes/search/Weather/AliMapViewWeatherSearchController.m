@@ -38,6 +38,7 @@
     
     //发起请求,开始POI的天气查询检索
     [_POISearchManager AMapWeatherSearch:weatherSearchRequest];
+    [XYQProgressHUD showMessage:@"正在获取天气"];
 }
 
 
@@ -49,6 +50,8 @@
 
 //收集检索到的天气目标
 - (void)onWeatherSearchDone:(AMapWeatherSearchRequest *)request response:(AMapWeatherSearchResponse *)response{
+    [XYQProgressHUD hideHUD];
+    [XYQProgressHUD showSuccess:@"获取天气成功"];
    
     //实时天气
     [response.lives enumerateObjectsUsingBlock:^(AMapLocalWeatherLive * _Nonnull weatherLiveObj, NSUInteger idx, BOOL * _Nonnull stop) {

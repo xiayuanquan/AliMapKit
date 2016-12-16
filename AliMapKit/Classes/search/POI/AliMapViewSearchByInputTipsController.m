@@ -52,6 +52,7 @@
     
     //发起请求,开始POI的ID检索
     [_POISearchManager AMapInputTipsSearch:tipsRequest];
+    [XYQProgressHUD showMessage:@"正在检索"];
 }
 
 #pragma mark - AMapSearchDelegate
@@ -64,7 +65,9 @@
 //收集检索到的目标
 - (void)onInputTipsSearchDone:(AMapInputTipsSearchRequest *)request response:(AMapInputTipsSearchResponse *)response{
     
-    if (response.tips.count == 0)  return;
+    [XYQProgressHUD hideHUD];
+    if(response.tips.count == 0)  return;
+    [XYQProgressHUD showSuccess:@"检索成功"];
     [response.tips enumerateObjectsUsingBlock:^(AMapTip * _Nonnull poi, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.shopModels addObject:poi];
     }];

@@ -71,12 +71,14 @@
     
     //发起请求,开始POI的公交线路检索
     [_POISearchManager AMapBusLineNameSearch:busLineNameSearchRequest];
+    [XYQProgressHUD showMessage:@"正在查询"];
 }
 
 
 //公交站线路根据ID请求
 -(void)sendRequestForBusLineID{
     
+
     //先取消之前所有的请求
     [_POISearchManager cancelAllRequests];
     [self.busLines removeAllObjects];
@@ -90,6 +92,7 @@
     
     //发起请求,开始POI的公交线路检索
     [_POISearchManager AMapBusLineIDSearch:busLineIDSearchRequest];
+    [XYQProgressHUD showMessage:@"正在查询"];
 }
 
 
@@ -103,7 +106,9 @@
 //收集检索到的公交线路目标
 - (void)onBusLineSearchDone:(AMapBusLineBaseSearchRequest *)request response:(AMapBusLineSearchResponse *)response{
     
+    [XYQProgressHUD hideHUD];
     if (response.count==0) return;
+    [XYQProgressHUD showSuccess:@"查询成功"];
     
     [response.buslines enumerateObjectsUsingBlock:^(AMapBusLine * _Nonnull busLine, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.busLines addObject:busLine];

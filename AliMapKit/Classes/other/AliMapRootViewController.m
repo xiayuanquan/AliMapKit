@@ -11,6 +11,7 @@
 #import "AliMapViewDrawController.h"
 #import "AliMapViewPositionController.h"
 #import "AliMapViewSearchController.h"
+#import "AliMapViewRouteController.h"
 
 @interface AliMapRootViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong,nonatomic)NSMutableArray *allFunctions;//全部功能
@@ -85,6 +86,13 @@
         AliMapViewSearchController *mapViewPOIVC = [[AliMapViewSearchController alloc] init];
         mapViewPOIVC.title = self.allFunctions[indexPath.row];
         [self.navigationController pushViewController:mapViewPOIVC animated:YES];
+    }
+    
+    //驾车路线规划
+    if (indexPath.row==4) {
+        AliMapViewRouteController *mapViewRouteVC = [[AliMapViewRouteController alloc] init];
+        mapViewRouteVC.title = self.allFunctions[indexPath.row];
+        [self.navigationController pushViewController:mapViewRouteVC animated:YES];
     }
 }
 

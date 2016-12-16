@@ -41,6 +41,7 @@
     
     //发起请求,开始POI的地理编码检索
     [_POISearchManager AMapGeocodeSearch:geoSearchRequest];
+    [XYQProgressHUD showMessage:@"正在地理编码"];
 }
 
 //检索失败
@@ -51,8 +52,9 @@
 
 //收集地理编码检索到的目标
 - (void)onGeocodeSearchDone:(AMapGeocodeSearchRequest *)request response:(AMapGeocodeSearchResponse *)response{
-    
+    [XYQProgressHUD hideHUD];
     if (response.geocodes.count == 0)  return;
+    [XYQProgressHUD showSuccess:@"地理编码成功"];
     [response.geocodes enumerateObjectsUsingBlock:^(AMapGeocode * _Nonnull geo, NSUInteger idx, BOOL * _Nonnull stop) {
         [self showGeocodeInformation:geo];
     }];

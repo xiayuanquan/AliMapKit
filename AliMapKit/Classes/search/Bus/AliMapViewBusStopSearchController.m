@@ -38,6 +38,7 @@
     
     //发起请求,开始POI的公交站点检索
     [_POISearchManager AMapBusStopSearch:stopSearchRequest];
+    [XYQProgressHUD showMessage:@"正在查询"];
 }
 
 #pragma mark - <AMapSearchDelegate>
@@ -50,7 +51,10 @@
 
 //收集检索到的公交站点目标
 - (void)onBusStopSearchDone:(AMapBusStopSearchRequest *)request response:(AMapBusStopSearchResponse *)response{
+    
+    [XYQProgressHUD hideHUD];
     if (response.count==0) return;
+    [XYQProgressHUD showSuccess:@"查询成功"];
     
     [response.busstops enumerateObjectsUsingBlock:^(AMapBusStop * _Nonnull busStop, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.busstops addObject:busStop];

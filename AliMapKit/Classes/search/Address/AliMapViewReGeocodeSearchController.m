@@ -41,6 +41,7 @@
     
     //发起请求,开始POI的地理反编码检索
     [_POISearchManager AMapReGoecodeSearch:regeoSearchRequest];
+    [XYQProgressHUD showMessage:@"正在地理反编码"];
 }
 
 //检索失败
@@ -51,6 +52,8 @@
 
 //收集地理反编码检索到的目标
 - (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest *)request response:(AMapReGeocodeSearchResponse *)response{
+    [XYQProgressHUD hideHUD];
+    [XYQProgressHUD showSuccess:@"地理反编码成功"];
     [self showGeocodeInformation:response.regeocode];
 }
 
